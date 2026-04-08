@@ -1,0 +1,44 @@
+### ✅ Create a user (registration - no auth required)
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "name": "jamuna",
+  "email": "jamuna@example.com",
+  "password": "password123",
+  "role": "USER"
+}
+
+###
+
+### ✅ Create another user (e.g., shan)
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+
+{
+  "name": "rameshh",
+  "email": "rameshh@example.com",
+  "password": "password123",
+  "role": "USER"
+}
+
+###
+
+### ✅ Create Document Request for user with ID 9
+POST http://localhost:8080/api/requests?userId=23&documentType=Aadhaar
+Authorization: Basic c2hhbkBleGFtcGxlLmNvbTpwYXNzd29yZDEyMw==
+
+
+###
+
+### ✅ Get All Requests (this endpoint is protected)
+GET http://localhost:8080/api/requests
+Authorization: Basic c2hhbkBleGFtcGxlLmNvbTpwYXNzd29yZDEyMw==
+
+###
+
+### ✅ Update Document Status to APPROVED (protected)
+PUT http://localhost:8080/api/requests/10/status?status=APPROVED
+Authorization: Basic c2hhbkBleGFtcGxlLmNvbTpwYXNzd29yZDEyMw==
+
+###
