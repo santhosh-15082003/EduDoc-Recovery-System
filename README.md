@@ -95,6 +95,20 @@ Admin can manage requests, verify documents, and update status which reflects on
 - AI-Based Document Validation
 - Integration with Government Systems
 
+## ScreenShots:
+
+## 1 -> User and Admin DashBoard
+
+<img width="1893" height="902" alt="Screenshot 2026-03-24 133848" src="https://github.com/user-attachments/assets/b4ece376-8a31-4dc3-b39b-8711b5e8938b" />
+
+## 2 -> Form for both Document missing and Document Report
+
+<img width="1898" height="879" alt="Screenshot 2026-03-24 133508" src="https://github.com/user-attachments/assets/37ba7a2e-8462-4b12-a207-dc70de027387" />
+
+## 3 -> Admin DashBoard for Verifying the Documnet process
+
+<img width="1885" height="874" alt="Screenshot 2026-03-24 133650" src="https://github.com/user-attachments/assets/b3cd2fee-1b09-48e1-8528-b74d7f79e89d" />
+
 ## 👨‍🎓 Author
 
 - Developed by: SanThosh
