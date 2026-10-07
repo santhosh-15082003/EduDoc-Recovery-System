@@ -151,6 +151,7 @@ import { useEffect, useState } from "react";
 import { FiCheck, FiX, FiDownload, FiEye } from "react-icons/fi";
 import ViewFormModal from "../../components/ViewFormModal";
 import axios from "axios";
+import { API_BASE_URL } from "../../utils/apiConfig";
 
 export default function AdminIssuerReports() {
   const [requests, setRequests] = useState([]);
@@ -244,7 +245,7 @@ export default function AdminIssuerReports() {
       const auth = localStorage.getItem("auth");
 
       const response = await fetch(
-        `http://localhost:8081/api/requests/${id}/${type}`,
+        `${API_BASE_URL}/api/requests/${id}/${type}`,
         {
           method: "GET",
           headers: {

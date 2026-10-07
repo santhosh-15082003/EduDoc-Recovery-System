@@ -10,6 +10,8 @@ import { motion as Motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaGithub, FaShieldAlt, FaFileUpload, FaSearch, FaCheckCircle  } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
+import { API_BASE_URL } from "../utils/apiConfig";
+
 export default function Home() {
   const navigate = useNavigate();
 
@@ -28,7 +30,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:8081/api/contact", {
+    await fetch(`${API_BASE_URL}/api/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

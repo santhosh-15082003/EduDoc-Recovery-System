@@ -12,7 +12,7 @@ export default function MissingReports() {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const res = await axios.get("http://localhost:8081/api/missing", {
+        const res = await axios.get("/api/missing", {
           headers: { Authorization: `Basic ${token}` },
         });
         setReports(res.data);
@@ -26,7 +26,7 @@ export default function MissingReports() {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:8081/api/missing/${id}/status`, null, {
+      await axios.put(`/api/missing/${id}/status`, null, {
         params: { status, remark },
         headers: { Authorization: `Basic ${token}` },
       });
@@ -173,7 +173,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8081/api/missing/${selected.id}/fir`,
+                    `/api/missing/${selected.id}/fir`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"
@@ -184,7 +184,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8081/api/missing/${selected.id}/selfie`,
+                    `/api/missing/${selected.id}/selfie`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"
@@ -195,7 +195,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8081/api/missing/${selected.id}/verification`,
+                    `/api/missing/${selected.id}/verification`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"
@@ -206,7 +206,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8081/api/missing/${selected.id}/college-id`,
+                    `/api/missing/${selected.id}/college-id`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"

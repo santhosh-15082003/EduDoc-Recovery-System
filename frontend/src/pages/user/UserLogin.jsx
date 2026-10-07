@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/useAuth";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from "../../utils/apiConfig";
 
 export default function UserLogin() {
   const [email, setEmail] = useState("");
@@ -46,7 +47,7 @@ export default function UserLogin() {
     localStorage.setItem("auth", token);
 
     try {
-      const res = await fetch("http://localhost:8081/api/requests", {
+      const res = await fetch(`${API_BASE_URL}/api/requests`, {
         headers: {
           Authorization: `Basic ${token}`,
         },

@@ -127,6 +127,7 @@
 
 import { useState } from "react";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from "../../utils/apiConfig";
 
 export default function CreateRequest() {
   const [docType, setDocType] = useState("");
@@ -147,7 +148,7 @@ export default function CreateRequest() {
     formData.append("firCopy", firFile);
 
     try {
-      const res = await fetch("http://localhost:8081/api/requests", {
+      const res = await fetch(`${API_BASE_URL}/api/requests`, {
         method: "POST",
         headers: {
           Authorization: `Basic ${localStorage.getItem("auth")}`,

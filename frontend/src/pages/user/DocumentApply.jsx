@@ -146,7 +146,7 @@ export default function DocumentApplyModal({ onClose }) {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:8081/api/requests", payload, {
+      await axios.post("/api/requests", payload, {
         headers: {
           Authorization: `Basic ${token}`,
         },

@@ -38,8 +38,10 @@
 
 import axios from "axios";
 
+import { API_BASE_URL } from "./apiConfig";
+
 const api = axios.create({
-  baseURL: "http://localhost:8081",
+  baseURL: API_BASE_URL,
 });
 
 // ✅ ADD THIS INTERCEPTOR (VERY IMPORTANT)
