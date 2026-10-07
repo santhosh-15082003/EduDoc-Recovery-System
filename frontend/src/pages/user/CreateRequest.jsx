@@ -147,7 +147,7 @@ export default function CreateRequest() {
     formData.append("firCopy", firFile);
 
     try {
-      const res = await fetch("http://localhost:8080/api/requests", {
+      const res = await fetch("http://localhost:8081/api/requests", {
         method: "POST",
         headers: {
           Authorization: `Basic ${localStorage.getItem("auth")}`,

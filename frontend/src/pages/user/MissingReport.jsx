@@ -73,7 +73,7 @@ export default function MissingReport() {
   //   try {
   //     setLoading(true);
 
-  //     await axios.post("http://localhost:8080/api/missing", payload, {
+  //     await axios.post("http://localhost:8081/api/missing", payload, {
   //       headers: {
   //         Authorization: `Basic ${token}`,
   //       },
@@ -101,7 +101,7 @@ export default function MissingReport() {
       setAiLoading(true);
 
       const res = await axios.post(
-        "http://localhost:8080/api/missing/generate-description",
+        "http://localhost:8081/api/missing/generate-description",
         {
           fullName: form.fullName,
           documentType: form.documentType,
@@ -148,7 +148,7 @@ export default function MissingReport() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:8080/api/missing",
+        "http://localhost:8081/api/missing",
         payload,
         { headers: { Authorization: `Basic ${token}` } },
       );

@@ -244,7 +244,7 @@ export default function AdminIssuerReports() {
       const auth = localStorage.getItem("auth");
 
       const response = await fetch(
-        `http://localhost:8080/api/requests/${id}/${type}`,
+        `http://localhost:8081/api/requests/${id}/${type}`,
         {
           method: "GET",
           headers: {

@@ -46,7 +46,7 @@ export default function UserLogin() {
     localStorage.setItem("auth", token);
 
     try {
-      const res = await fetch("http://localhost:8080/api/requests", {
+      const res = await fetch("http://localhost:8081/api/requests", {
         headers: {
           Authorization: `Basic ${token}`,
         },

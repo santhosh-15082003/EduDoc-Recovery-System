@@ -12,7 +12,7 @@ export default function MissingReports() {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/api/missing", {
+        const res = await axios.get("http://localhost:8081/api/missing", {
           headers: { Authorization: `Basic ${token}` },
         });
         setReports(res.data);
@@ -26,7 +26,7 @@ export default function MissingReports() {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:8080/api/missing/${id}/status`, null, {
+      await axios.put(`http://localhost:8081/api/missing/${id}/status`, null, {
         params: { status, remark },
         headers: { Authorization: `Basic ${token}` },
       });
@@ -41,7 +41,7 @@ export default function MissingReports() {
   };
 
   // const downloadFile = (id, type) => {
-  //   window.open(`http://localhost:8080/api/missing/${id}/${type}`, "_blank");
+  //   window.open(`http://localhost:8081/api/missing/${id}/${type}`, "_blank");
   // };
 
   // ✅ FIXED DOWNLOAD FUNCTION (With Auth Header)
@@ -173,7 +173,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8080/api/missing/${selected.id}/fir`,
+                    `http://localhost:8081/api/missing/${selected.id}/fir`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"
@@ -184,7 +184,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8080/api/missing/${selected.id}/selfie`,
+                    `http://localhost:8081/api/missing/${selected.id}/selfie`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"
@@ -195,7 +195,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8080/api/missing/${selected.id}/verification`,
+                    `http://localhost:8081/api/missing/${selected.id}/verification`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"
@@ -206,7 +206,7 @@ export default function MissingReports() {
               <button
                 onClick={() =>
                   downloadFile(
-                    `http://localhost:8080/api/missing/${selected.id}/college-id`,
+                    `http://localhost:8081/api/missing/${selected.id}/college-id`,
                   )
                 }
                 className="bg-gray-600 text-white px-3 py-1 rounded"

@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:8080', // proxies /api to Spring Boot
+      '/api': 'http://localhost:8081', // proxies /api to Spring Boot
     },
   },
 })

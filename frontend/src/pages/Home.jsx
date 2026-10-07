@@ -28,7 +28,7 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:8080/api/contact", {
+    await fetch("http://localhost:8081/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

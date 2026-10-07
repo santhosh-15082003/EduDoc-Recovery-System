@@ -68,7 +68,7 @@ export default function DocumentApplyModal({ onClose }) {
 
   //     console.log("TOKEN:", token);
 
-  //     await axios.post("http://localhost:8080/api/requests", payload, {
+  //     await axios.post("http://localhost:8081/api/requests", payload, {
   //       headers: {
   //         Authorization: `Basic ${token}`, // ✅ THIS WAS MISSING
   //       },
@@ -146,7 +146,7 @@ export default function DocumentApplyModal({ onClose }) {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:8080/api/requests", payload, {
+      await axios.post("http://localhost:8081/api/requests", payload, {
         headers: {
           Authorization: `Basic ${token}`,
         },
